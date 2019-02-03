@@ -1,0 +1,30 @@
+body {
+	
+
+}
+
+p{
+	padding:10px;
+	margin:15px;
+background-color:#dddddd;
+font-size:32px;
+border-radius:100px;
+text-align:center;
+}
+	color:white;
+#a122{
+	background-color:black;
+}
+
+}
+p:hover{
+	border:10px solid#dddddd;
+
+}
+#ferum{
+	color:white;
+}
+div{
+
+	font-size:50px;
+}

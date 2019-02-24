@@ -1,0 +1,59 @@
+<style>
+.player{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#player1{
+
+}
+
+#player2{
+    background-color: blue;
+}
+</style>
+<div id="player1" class="player" style="background-color: black;"></div>
+<div id="player2" class="player"></div>
+<script>
+  const DELTA = 10;
+  let players = [{x: 0, y: 0}, {x: 0, y: 0}];
+addEventListener("keypress", e=>{
+  switch (e.key) {
+    case "w":
+      players[0].y -= DELTA;
+      break;
+    case "a":
+      players[0].x -= DELTA;
+      break;
+    case "s":
+      players[0].y += DELTA;
+      break;
+    case "d":
+      players[0].x += DELTA;
+      break;
+
+    case "u":
+      players[1].y -= DELTA;
+      break;
+    case "h":
+      players[1].x -= DELTA;
+      break;
+    case "j":
+      players[1].y += DELTA;
+      break;
+    case "k":
+      players[1].x += DELTA;
+      break;
+  }
+});
+
+function render(){
+  document.querySelector("#player1").style.left=`${players[0].x}px`;
+  document.querySelector("#player1").style.top=`${players[0].y}px`;
+  document.querySelector("#player2").style.left=`${players[1].x}px`;
+  document.querySelector("#player2").style.top=`${players[1].y}px`;
+}
+setInterval(render, 30);
+</script>

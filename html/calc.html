@@ -1,0 +1,19 @@
+<script type="text/javascript">
+let input = prompt("введите квадратное уравнение в формате ax^2+bx+c=0", "2x^2+4x+6=0");
+let regExp = /-?\d+/g;
+let [a,, b, c] = input.match(regExp);
+a = +a ;
+b = +b;
+c = +c;
+let d = b ** 2 - 4 * a * c;
+let message;
+
+if (d > 0) {
+  message = "решения квадратного уравнения = " + ((0 - b + Math.sqrt(d)) / (2 * a)) + "; " + ((0 - b - Math.sqrt(d)) / (2 * a))
+} else if (d === 0) {
+ message = "решениe квадратного уравнения = " + ((0 - b ) / (2 * a));
+} else {
+  message ="корней нет";
+}
+alert(message);
+</script>
